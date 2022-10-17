@@ -6,11 +6,13 @@ const imagesArray=[
   "05.jpg"
 ];
 
+const el = document.querySelector.bind(document);
+
 let imagesTags="";
 let thumbnailsTags="";
 
-const slider = document.querySelector('.slider');
-const thumbnails = document.querySelector('.thumbnails');
+const slider = el('.slider');
+const thumbnails = el('.thumbnails');
 
 for (let i=0; i<imagesArray.length; i++) {
   imagesTags += `
@@ -24,8 +26,8 @@ for (let i=0; i<imagesArray.length; i++) {
 slider.innerHTML += imagesTags;
 thumbnails.innerHTML += thumbnailsTags;
 
-const next = document.querySelector('.btn-chevron.down');
-const prev = document.querySelector('.btn-chevron.up');
+const next = el('.btn-chevron.down');
+const prev = el('.btn-chevron.up');
 
 const items = document.getElementsByClassName ('item');
 const thumbnailItems = document.getElementsByClassName ('thumbnail-item');
