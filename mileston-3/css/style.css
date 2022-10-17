@@ -8,6 +8,7 @@
 .container {
   min-width: 800px;
   position: relative;
+  display: flex;
 }
 
 .slider {
@@ -25,6 +26,7 @@
   padding-top: 5px;
   position: absolute;
   left: calc(50% - calc(30px / 2));
+  z-index: 999;
 }
 
 .btn-chevron.up {
@@ -41,9 +43,10 @@
 /***** bottoni chevron *****/
 
 /***** immagini *****/
-
 .container img {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .item {
@@ -53,5 +56,28 @@
 .item.active {
   display: block;
 }
-
 /***** /immagini *****/
+
+/***** thumbnails *****/
+.thumbnails {
+  width: 200px;
+  height: 300px;
+  background-color: black;
+}
+
+.thumbnails img {
+  width: 100%;
+  height: calc(100% /5);
+  display: flex;
+  direction: column;
+  object-fit:cover;
+}
+
+.thumbnail-item {
+  filter: opacity(0.5);
+}
+
+.thumbnail-item.active {
+  filter: opacity(1);
+}
+/***** /thumbnails *****/
