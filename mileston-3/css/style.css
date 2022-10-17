@@ -1,3 +1,13 @@
+:root {
+  --thumbnails-width: 150px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main-wrapper {
   display: flex;
   align-items: center;
@@ -6,27 +16,22 @@
 }
 
 .container {
-  min-width: 800px;
   position: relative;
   display: flex;
 }
 
-.slider {
-  width: 100%;
-}
-
 /***** bottoni chevron *****/
 .btn-chevron {
+  position: absolute;
+  right: calc(calc(var(--thumbnails-width) / 2) - calc(30px / 2));
+  z-index: 999;
   width: 30px;
   aspect-ratio: 1;
+  font-size: 20px;
   background-color: rgb(221, 206, 209);
-  font-size: 25px;
   border-radius: 100%;
-  padding-left: 5px;
+  text-align: center;
   padding-top: 5px;
-  position: absolute;
-  left: calc(50% - calc(30px / 2));
-  z-index: 999;
 }
 
 .btn-chevron.up {
@@ -44,7 +49,7 @@
 
 /***** immagini *****/
 .container img {
-  width: 100%;
+  width: 700px;
   height: 300px;
   object-fit: cover;
 }
@@ -60,7 +65,7 @@
 
 /***** thumbnails *****/
 .thumbnails {
-  width: 200px;
+  width: var(--thumbnails-width);
   height: 300px;
   background-color: black;
 }
@@ -79,5 +84,6 @@
 
 .thumbnail-item.active {
   filter: opacity(1);
+  border: 2px solid white;
 }
 /***** /thumbnails *****/
