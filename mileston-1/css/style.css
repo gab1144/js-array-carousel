@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  min-width: 800px;
+  position: relative;
+}
+
+/***** bottoni chevron *****/
+.btn-chevron {
+  width: 30px;
+  aspect-ratio: 1;
+  background-color: rgb(221, 206, 209);
+  font-size: 25px;
+  border-radius: 100%;
+  padding-left: 5px;
+  padding-top: 5px;
+  position: absolute;
+  left: calc(50% - calc(30px / 2));
+}
+
+.btn-chevron.up {
+  top: 10px;
+}
+
+.btn-chevron.down {
+  bottom: 10px;
+}
+
+.btn-chevron:hover {
+  color: blue;
+}
+/***** bottoni chevron *****/
+
+/***** immagini *****/
+
+.container img {
+  width: 100%;
+}
+
+.item {
+  display: none;
+}
+
+.item.active {
+  display: block;
+}
+
+/***** /immagini *****/
